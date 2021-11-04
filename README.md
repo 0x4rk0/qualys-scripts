@@ -1,2 +1,1 @@
-# qualys-scripts
-# qualys-scripts
+#Qualys API Scripts
