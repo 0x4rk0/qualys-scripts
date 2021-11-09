@@ -1,0 +1,22 @@
+
+if(asset.getAssetType()!=Asset.AssetType.HOST) return false;def today = new Date();
+
+if (!asset.hasAnyVuln([90924])) return false;else if (asset.getOperatingSystem().contains("Windows")){
+ 
+
+lastboot = asset.resultsForQid(90924L);
+ 
+
+lastboot = lastboot.substring(49);
+ 
+
+def date = new Date().parse("yyyy/MM/dd", lastboot)
+ 
+
+days_old = ADD INT HERE
+ 
+
+return today.minus(date) > days_old;
+ 
+
+}
