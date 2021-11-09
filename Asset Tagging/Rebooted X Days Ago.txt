@@ -1,3 +1,4 @@
+# This script is a groovy script, it will tag host that are => than the number you supply. So if you put "365", it will tag hosts that have not been rebooted in over 364 days.
 
 if(asset.getAssetType()!=Asset.AssetType.HOST) return false;def today = new Date();
 
